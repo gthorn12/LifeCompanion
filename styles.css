@@ -1,10 +1,21 @@
 h1 {
-    background-color: #fd89d1;
+    font-family: 'Press Start 2P';
 }
 
 body {
-    margin: 10px;
-    background-color: #fd89d1;
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #ffb6df 0%,
+            #fd89d1 45%,
+            #dd5caf 100%
+        );
+
+    font-family: 'Press Start 2P';
 }
 
 .logo {
@@ -13,6 +24,7 @@ body {
     font-size: 1.5rem;
     text-align: center;
     margin-top: 100px;
+    padding-bottom: 25px;
 }
 
 @keyframes fadeIn {
@@ -44,20 +56,22 @@ body {
 .logo-life {
     line-height: 1;
     font-size: 2.15rem;
-    margin-bottom: -22px;
-    margin-left: -95px;
+    margin-bottom: -14px;
+    margin-left: -208px;
     animation: dropIn 1s ease-in-out;
     animation-delay: 1s;
     animation-fill-mode: backwards;
 }
 
 .daily-prompt {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     margin-top: 50px;
+    padding-bottom: 25px;
     animation: slideInLeft 1s ease-in-out;
     animation-delay: 2s;
     animation-fill-mode: backwards;
+    font-family: 'Press Start 2P';
 }
 
 .begin-wrapper {
@@ -67,27 +81,53 @@ body {
 }
 
 .begin-button {
-    display: block;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #fff;
-    border: 2px solid #af0083;
-    border-radius: 5px;
+    padding: 12px 24px;
+
+    background: #fff;
+    color: #9d006f;
+
+    border: 4px solid #9d006f;
+    border-radius: 0;
+
+    box-shadow:
+        3px 3px 0 #6d004e;
+
+    font-family: 'Press Start 2P';
+    font-size: 0.7rem;
     cursor: pointer;
-    animation: fadeIn 1s ease-in-out;
-    animation-delay: 3s;
-    animation-fill-mode: backwards;
+}
+
+.begin-button:hover {
+    transform: translate(-2px, -2px);
+
+    box-shadow:
+        2px 2px 0 #6d004e,
+        0 0 10px #fff;
 }
 
 .pulse {
     position: absolute;
     inset: 0;
 
-    border: 2px solid #fff;
-    border-radius: 8px;
+    border: 3px solid #fff;
+    border-radius: 0px;
 
     pointer-events: none;
     
+    opacity: 0;
+
+    image-rendering: pixelated;
+}
+
+.pulse:hover {
+    position: relative;
+    inset: 0;
+
+    border: 3px solid #6d004e;
+    border-radius: 8px;
+
+    pointer-events: none;
+
     opacity: 0;
 }
 
