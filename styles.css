@@ -3,11 +3,16 @@ h1 {
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
-    overflow: hidden;
-
     background:
+        linear-gradient(
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px
+        ),
         radial-gradient(
             circle at center,
             #ffb6df 0%,
@@ -15,7 +20,10 @@ body {
             #dd5caf 100%
         );
 
-    font-family: 'Press Start 2P';
+    background-size:
+        8px 8px,
+        8px 8px,
+        auto;
 }
 
 .logo {
@@ -25,6 +33,7 @@ body {
     text-align: center;
     margin-top: 100px;
     padding-bottom: 25px;
+    font-family: 'Press Start 2P';
 }
 
 @keyframes fadeIn {
@@ -119,18 +128,6 @@ body {
     image-rendering: pixelated;
 }
 
-.pulse:hover {
-    position: relative;
-    inset: 0;
-
-    border: 3px solid #6d004e;
-    border-radius: 8px;
-
-    pointer-events: none;
-
-    opacity: 0;
-}
-
 .pulse-1 {
     animation: pulse 2s infinite;
     animation-delay: 4s;
@@ -144,4 +141,22 @@ body {
 .pulse-3 {
     animation: pulse 2s infinite;
     animation-delay: 5s;
+}
+
+@media (max-width: 600px) {
+    .logo-companion {
+        font-size: 2rem;
+    }
+
+    .logo-life {
+        font-size: 1.5rem;
+        margin-left: -135px;
+        margin-bottom: -10px;
+    }
+
+    .daily-prompt {
+        font-size: 0.75rem;
+        line-height: 1.6;
+        padding: 0 20px;
+    }
 }
