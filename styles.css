@@ -121,6 +121,10 @@ body {
     font-family: 'Press Start 2P';
     font-size: 0.7rem;
     cursor: pointer;
+
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: backwards;
 }
 
 .begin-button:hover {
