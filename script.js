@@ -1,8 +1,14 @@
 
-beginButton.addEventListener("click", () => {
-    transition.classList.add("play-transitionl");
-    setTimeout(() => {
-        //switch to the next screen or perform any other action after the transition
+const beginButton = document.getElementById("begin-button");
+const transition = document.querySelector(".screen-transition");
 
-    }, 400);
+beginButton.addEventListener("click", () => {
+    transition.classList.add("play-transition");
+    setTimeout(() => {
+        document.querySelector(".splash-screen").style.display = "none";
+        document.querySelector(".wake-screen").style.display = "flex";
+    }, 600);
+    setTimeout(() => {
+        transition.classList.remove("play-transition");
+    }, 1200);
 });
